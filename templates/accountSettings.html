@@ -1,0 +1,27 @@
+{% extends 'layout.html'%} {%block head%}
+<title>Admin Panel</title>
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='css/adminPanel.css') }}"
+/>
+{% endblock head %} {%block body%}
+<div class="toPanelsContainer">
+  <h2>
+    <a href="/changeusername" class="toPanel textPrimary"
+      >change your username</a
+    >
+  </h2>
+  <h2>
+    <a href="/changepassword" class="toPanel textPrimary"
+      >change your password</a
+    >
+  </h2>
+  <h2>
+    <a
+      href="/deleteuser/{{session['userName']}}/redirect=&"
+      class="toPanel textPrimary"
+      >delete your account</a
+    >
+  </h2>
+</div>
+{% endblock body %}

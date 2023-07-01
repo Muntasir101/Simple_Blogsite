@@ -1,0 +1,13 @@
+{% extends 'layout.html'%} {%block head%}
+<title>Create Post</title>
+{% endblock head %} {%block body%}
+<div class="container">
+  <form method="post" class="form formPost centeredHorizontally">
+    {{form.postTitle(class_="input centeredHorizontally" , autocomplete="off")}}
+    {{form.postTags(class_="input centeredHorizontally" , autocomplete="off")}}
+    <small>(separete with comma)</small>
+    {{form.postContent(class_="editor", autocomplete="off")}}
+    <button type="submit" class="btn btnPrimary">Post</button>
+  </form>
+</div>
+{% endblock body %}
